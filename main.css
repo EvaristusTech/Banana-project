@@ -13,6 +13,15 @@ nav ul{
     display: none;
 }
 
+#nav ul li:last-of-type{
+    display: flex;
+}
+
+#nav ul li:last-of-type a{
+    flex: 1 0 auto;
+    text-align: center;
+}
+
 nav ul li a{
     text-decoration: none;
     display: block;
@@ -41,9 +50,11 @@ nav ul li a:hover{
     font-size: 30px;
 }
 
-/* #nav ul .nav-icons{
-    display: flex;
-} */
+.new-nav{
+    position: fixed;
+    width: 100vw;
+    cursor: pointer;
+}
 
 @media screen  and (min-width: 776px){
     #nav{
@@ -75,8 +86,87 @@ nav ul li a:hover{
       transform: scale(0.85);  
     }
 
+    #nav ul li:last-of-type,
     #toggle-btn,
     .nav-icons{
         display: none;
     }
+}
+
+header{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#banner{
+    flex: 1 0 auto;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(images/banner.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-text h1{
+    text-transform: uppercase;
+    color: #ffc914;
+    font-size: 60px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.banner-text h3{
+    text-transform: capitalize;
+    font-size: 30px;
+    margin: 10px 0;
+    color: #d9e5d6;
+}
+
+.banner-text a{
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding: 10px;
+    color: #ffc914;
+    border: 3px solid #ffc914;
+    background: transparent;
+    transition: color 2s ease, background 2s ease, transform 2s ease;
+}
+
+.banner-text a:hover{
+    color: #2e282a;
+    background: #ffc914;
+    transform: scale(0.9);
+}
+
+/* ############ icon-section ######### */
+#icon-section{
+    height: 70px;
+    background: #2e282a;
+    text-align: center;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 40%);
+    padding: 20px 0 40px 0;
+}
+
+#icon-section a{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 30px;
+    color: #ffc914;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.8);
+    transition: transform 2s ease, color 2s ease;
+}
+
+#icon-section a:hover{
+    transform: translateY(-10px);
+    color: #d9e5d6;
 }
