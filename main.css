@@ -52,6 +52,7 @@ nav ul li a:hover{
 
 .new-nav{
     position: fixed;
+    z-index: 10;
     width: 100vw;
     cursor: pointer;
 }
@@ -148,7 +149,7 @@ header{
 
 /* ############ icon-section ######### */
 #icon-section{
-    height: 70px;
+    height: 80px;
     background: #2e282a;
     text-align: center;
     clip-path: polygon(0 0,100% 0,100% 100%,0 40%);
@@ -169,4 +170,122 @@ header{
 #icon-section a:hover{
     transform: translateY(-10px);
     color: #d9e5d6;
+}
+
+.title{
+    display: flex;
+    padding: 20px;
+}
+
+.title-icon .fa{
+    font-size: 60px;
+    color: #ffc914;
+    margin-right: 10px;
+}
+
+.title-text{
+    padding-left: 10px;
+    border-left: 3px solid #b5c2b7;
+    text-transform: uppercase;
+}
+
+.title-heading{
+    color: #2e282a;
+}
+
+.title-subheading{
+    padding: 5px;
+    text-transform: capitalize;
+    color: #b5c2b7;
+}
+
+/* #################skills############### */
+
+#skills .title{
+    margin-top: -50px;
+}
+
+.skills-center{
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.skill{
+    margin: 40px 0;
+}
+
+.skill .fa{
+    font-size: 60px;
+    color: #00a7e1;
+    background: #ffc914;
+    padding: 60px;
+    transition: color 2s ease, background 2s ease;
+}
+
+.skill .fa:hover{
+    background: #2e282a;
+    color: #ffc914;
+}
+
+.skill h3{
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.skill p{
+    line-height: 1.5;
+    width: 70%;
+    color: #b5c2b7;
+}
+
+.fa-apple{
+    clip-path: polygon(0 100%, 50% 0, 100% 100%);
+}
+.fa-google{
+    clip-path: polygon(0 0,100% 0,100% 100%,0 60%);
+}
+.fa-android{
+    clip-path: polygon(0 50%, 50% 0, 100% 50%, 50% 100%);
+}
+.fa-gear{
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+@media screen and (min-width: 576px){
+    .skills-center{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .skill {
+        flex: 0 0 calc(50% - 1em);
+        text-align: center;
+    }
+    .skill p{
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .skill {
+        flex: 0 0 calc(25% - 1em);
+        /* text-align: center; */
+    }
+    .skill p{
+        /* margin: 0 auto; */
+        width: 100%;
+    }
+}
+
+/* ###############form section####################### */
+
+#form{
+    min-height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/cover.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
