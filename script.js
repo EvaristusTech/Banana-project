@@ -22,4 +22,7 @@ $('nav a').click(function(link){
 
     $('html, body').animate({
         scrollTop : $(target).offset().top},"slow");
+
+//accordion
+$("accordion").accordion();
 })

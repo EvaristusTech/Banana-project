@@ -288,4 +288,179 @@ header{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    clip-path: polygon(0 15%,100% 0,100% 85%,0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.form-title{
+    text-align: center;
+    color: #f5f3f5;
+    margin: 0 0 40px 0;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#email{
+    border: none;
+    background: transparent;
+    border-bottom: 3px solid #f5f3f5;
+    font-size: 30px;
+    margin: 10px 20px;
+}
+
+#email::placeholder{
+    color: #f5f3f5;
+    text-transform: capitalize;
+}
+
+#submit{
+    display: inline-block;
+    background: transparent;
+    border: 3px solid #f5f3f5;
+    padding: 10px 30px;
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffc914;
+    margin: 10px 20px;
+    transition: color 2s ease,background 2s ease,border 2s ease,transform 2s ease;
+}
+
+#submit:hover{
+    color: #f5f3f5;
+    background: #ffc914;
+    border-color: #ffc914;
+    transform: scale(0.9);
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ####################work################## */
+#work .title{
+    flex-direction: row-reverse;
+    margin-top: -25px;
+}
+
+#work .title-icon .fa{
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+#work .title-text{
+    padding-left: 0;
+    padding-right: 10px;
+    border-right: 3px solid #b5c2b7;
+    border-left: none;
+}
+
+.work-center{
+    padding: 40px 0;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.picture-item img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid #ffc914;
+}
+
+.button-group{
+    padding: 0 0 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button-group button{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 25px;
+    margin: 10px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    color: #f5f3f5;
+    background: #00a7e1;
+    transition: color 2s ease, background 2s ease, transform 2s ease;
+}
+
+.button-group button:hover{
+    color: #00a7e1;
+    background: #f5f3f5;
+    transform: scale(0.9);
+}
+
+.picture-item{
+    width: calc(50% - 20px);
+    margin: 10px;
+}
+
+@media screen and (min-width:992px) {
+    .picture-item{
+        width: calc(25% - 20px);
+    }
+}
+
+/* ##################about us############## */
+
+#about {
+    min-height: 90vh;
+    padding: 40px 0;
+    background: linear-gradient(rgba(255, 201, 20, 0.3),rgba(255, 201, 20, 0.5)), url(images/background.jpg) center/cover no-repeat fixed;
+    /* background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+}
+
+#about-center{
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+#about-photo img{
+    width: 100%;
+    border-radius: 20px;
+    transition: transform 2s ease;
+}
+
+#about-photo img:hover{
+    transform: scale(0.8);
+}
+
+#about-photo,
+#about-text {
+    margin: 40px 0;
+}
+
+.ui-accordion-header{
+
+}
+
+.ui-accordion .ui-accordion-content{
+
+}
+
+@media screen and (min-width:776px) {
+    #about-center{
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+    }
+
+    #about-photo,
+    #about-text {
+        flex: 0 0 calc(50% - 10px);
+    }
+
+    #about-text{
+        align-self: center;
+    }
+}
+
